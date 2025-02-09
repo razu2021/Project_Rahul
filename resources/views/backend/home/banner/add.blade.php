@@ -18,7 +18,8 @@
                     </div>
                     <hr>
                     <div class="card-body">
-                        <form action="#" method="post" enctype="multipart/form-data">
+                        <form action="{{route('home_banner.submit')}}" method="post" enctype="multipart/form-data">
+                            @csrf
                             <div>
                                 <label for="defaultFormControlInput" class="form-label">Banner Heading</label>
                                 <input type="text" class="form-control" name="banner_heading" id="banner_heading" placeholder="Banner Heading"/>
@@ -37,7 +38,7 @@
                             {{-- input end --}}
                             <div>
                                 <label for="defaultFormControlInput" class="form-label">Banner Caption</label>
-                                <input type="text" class="form-control" name="banner_cation" id="banner_cation"placeholder="Banner caption"/>
+                                <input type="text" class="form-control" name="banner_caption" id="banner_cation"placeholder="Banner caption"/>
                                 <div id="defaultFormControlHelp" class="form-text">
                                     We'll never share your details with anyone else.
                                 </div>
@@ -53,7 +54,7 @@
                             {{-- input end --}}
                             <div>
                                 <label for="defaultFormControlInput" class="form-label"> Button Ulr</label>
-                                <input type="text" class="form-control" name="banner_url" id="defaultFormControlInput"placeholder="Button Url"/>
+                                <input type="text" class="form-control" name="button_url" id="defaultFormControlInput"placeholder="Button Url"/>
                                 <div id="defaultFormControlHelp" class="form-text">
                                     We'll never share your details with anyone else.
                                 </div>
@@ -67,7 +68,9 @@
                                 </div>
                             </div>
                             {{-- input end --}}
-
+                            <div class="form_button mt-4">
+                                <button type="submit" class="btn btn-success">Submit</button>
+                            </div>
                         </form>
                     </div>
                 </div>

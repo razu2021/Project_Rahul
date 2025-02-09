@@ -33,7 +33,11 @@ Route::prefix('home-page-banner/')->name('home_banner.')->group(function(){
     Route::get('view',[BannerController::class,'view'])->name('view');
     Route::get('edit',[BannerController::class,'edit'])->name('edit');
     Route::get('recycle',[BannerController::class,'recycle'])->name('recycle');
+
+
+    Route::post('submit-data',[BannerController::class,'insert'])->name('submit');
     
+
 });
 
 
